@@ -1,0 +1,833 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: 'MontserratT'
+    font-display: swap
+    src: url('../fonts/Montserrat-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+    @font-face
+        font-family: 'MontserratT'
+        font-display: swap
+        src: url('../fonts/Montserrat-SemiBold.ttf')
+        font-weight: bold
+        font-style: normal
+
+html
+    font-family: 'MontserratT'
+    font-weight: regular
+
+$color-blue: #5290EA
+$color-orange: #F28B64
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+.main-section
+    position: relative
+    min-height: 800px
+    background: #F0F0F0
+    padding-top: 16px
+    overflow: hidden
+    margin-bottom: 30px
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 69px
+        align-items: center
+        font-weight: bold
+    &__logo
+        width: 134px
+    &__content-container
+        position: relative
+        display: flex
+        flex-direction: row
+    &__first-elipse
+        position: absolute
+        top: 129px
+        right: 80px
+    &__second-elipse
+        position: absolute
+        right: -120px
+        top: 650px
+
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px
+        a
+            text-decoration: none
+            color: black
+            &:hover
+                color: red
+                font-size: 20px
+                transition: 1s all
+
+.left-wrapper
+    position: relative
+    img
+        position: relative
+        z-index: 5
+    &__rectangle-blue
+        position: absolute
+        top: 150px
+        left: -50px
+        width: 565.95px
+        height: 220px
+        background: $color-blue
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        transform: rotate(-64deg)
+        z-index: 2
+    &__rectangle-orange
+        position: absolute
+        width: 618.43px
+        height: 220px
+        left: -30px
+        top: 160px
+        background: $color-orange
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        transform: rotate(-50.81deg)
+        z-index: 3
+    &__rectangle-grey
+        position: absolute
+        width: 608.97px
+        height: 220px
+        left: 10px
+        top: 190px
+        background: #E2E2E2
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        transform: rotate(-36.15deg)
+        z-index: 1
+
+.right-wrapper
+    width: 372px
+    position: absolute
+    top: 150px
+    right: 76px
+    z-index: 5
+    &__icons-box
+        margin-bottom: 1px
+        padding-left: 10px
+    &__title
+        margin-bottom: 5px
+    &__text
+        font-size: 16px
+        margin-bottom: 20px
+.icons__item:hover
+    border: 2px solid red
+    transition: 0.8s all
+.icons
+    display: flex
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $color-blue
+        border-radius: 100px
+        margin-right: 17px
+        &:last-child
+            margin-right: 0px
+        i
+            font-size: 21px
+
+.title
+    font-size: 72px
+    position: relative
+    z-index: 3
+    font-weight: bold
+    &__hr
+        width: 65px
+        position: absolute
+        bottom: 0px
+        margin: 0
+        border: none
+        border-top: 1px solid black
+.buttons__icon-btn:hover
+    font-size: 18px
+    transition: 1s all
+.buttons__main-btn:hover
+    background: red
+    width: 210px
+    height: 70px
+    transition: 1s all
+.buttons
+    display: inline-flex
+    font-weight: bold
+    &__main-btn
+        margin-right: 32px
+        width: 200px
+        height: 60px
+        border-radius: 100px
+        background: $color-orange
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        border: none
+        color: #FFF
+        font-size: 18px
+        font-style: normal
+    &__icon-btn
+        display: inline-flex
+        align-items: center
+        img
+            margin-right: 12px
+        &__text
+            font-size: 16px
+.elipse
+    width: 194px
+    height: 194px
+    background: linear-gradient(144deg, rgba(237, 123, 80, 0.50) 14.85%, rgba(72, 138, 234, 0.50) 53.25%, rgba(44, 44, 44, 0.50) 85.74%)
+    border-radius: 150px
+    display: flex
+    justify-content: center
+    align-items: center
+    &_big
+        width: 282px
+        height: 282px
+    &__subtract
+        width: 129.33px
+        height: 129.33px
+        background: #f0f0f0
+        border-radius: 150px
+        &_big
+            width: 188px
+            height: 188px
+
+//вторая секция
+.skills
+    overflow: hidden
+
+.skills-wrapper__title
+    margin-bottom: 40px
+
+.skills__games
+    display: flex
+    justify-content: space-between
+    margin-bottom: 26px
+    position: relative
+    pointer-events: none
+//слайдер
+/* .skills__games
+ max-width: 500px
+ height: 410px
+ margin: 0 auto
+ position: relative
+ overflow: hidden */
+
+//cтрелочки
+.skills__arrow
+    width: 100px
+    display: none
+.arrow__img
+    width: 76px
+    height: 93px
+    z-index: 500
+.arrow_two
+    position: absolute
+    top: 0px
+    right: -30px
+    z-index: 100
+.arrow_one
+    position: absolute
+    top: 134px
+    right: 400px
+    z-index: 100
+
+.guitar_centers
+    display: flex
+    width: 360px
+    height: 360px
+    border-radius: 10px
+    color: #000
+    font-size: 36px
+/* //slider
+/* .guitar_centers
+ position: absolute
+ top: 0
+ width: 100%
+ display: flex
+ align-items: center
+ justify-content: center */ */
+.skills__electric-guitar
+    background: #E2E2E2
+    z-index: 1
+.dots
+    display: none
+
+.skills__title
+    writing-mode: vertical-rl
+    text-align: center
+    font-weight: bold
+
+.skills__img
+    width: 197px
+    height: 335px
+    padding-right: 25px
+    margin-top: 25px
+
+.skills__acoustic-guitar
+    background: $color-orange
+
+.skills__electric-guitar
+    background: #9E9E9E
+    z-index: 1
+.skills__ukulele-guitar
+    background: $color-blue
+
+.skills__times
+    display: flex
+    justify-content: space-evenly
+
+.skills__wrapper-element
+    display: flex
+    width: 206px
+    margin-bottom: 60px
+
+.skills__icons
+    margin-right: 20px
+    width: 80px
+    height: 80px
+
+.clills__text-times
+    color: #000
+    font-size: 18px
+
+.number__big
+    width: 30px
+    height: 48px
+    color: #000
+    font-size: 48px
+    font-weight: bold
+/* .skills .container
+ position: relative */
+
+.skills__first-elipse
+    position: absolute
+    top: -86px
+    right: -91px
+    z-index: -1
+
+.skills__second-elipse
+    position: absolute
+    top: 255px
+    left: -86px
+    z-index: -1
+.subtract_while
+    background: #fffF
+
+.information
+    position: relative
+    overflow: hidden
+    background: #F0F0F0
+    & .container
+        display: flex
+        min-height: 640px
+    &__titles
+        position: relative
+        /* min-width: 642px */
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+    &__wrapper__title-texts
+        margin-bottom: 20px
+    &__text-wrapper
+        margin-top: 47px
+    &__text-wrappers
+        max-width: 479px
+    &__text
+        color: #000
+        font-size: 18px
+        padding-bottom: 30px
+    &__first-elipse
+        position: absolute
+        top: 166px
+        left: 157px
+        z-index: 1
+
+    &__two-elipse
+        position: absolute
+        top: 229px
+        left: 79px
+        z-index: 0
+.elipse_min
+    width: 282px
+    height: 282px
+
+.elipse_min__two
+    width: 230px
+    height: 230px
+.subtract_min
+    width: 188px
+    height: 188px
+.information__three-elipse
+    position: absolute
+    top: -107px
+    right: -135px
+    z-index: 0
+/* .footer
+ position: relative
+ & .container
+ display: flex
+ justify-content: flex-end
+ min-height: 272px
+ &__title-wrapper
+ margin-top: 39px
+ margin-bottom: 20px
+//.footer__img
+ //   position: absolute
+//    bottom: 0
+//    left: -250px 
+.title-hr_top
+    bottom: 75px
+
+.footer
+    &__img
+        position: absolute
+        left: -127px
+        bottom: 0px
+    &__title-text
+        margin-bottom: 20px
+.footer .container
+    position: relative
+    min-height: 272px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+@media (max-width:1199px)
+    .container
+        width: 960px
+    .left-wrapper img
+        width: 750px
+    .title
+        font-size: 55px
+    .left-wrapper__rectangle-blue
+        width: 500px
+        height: 200px
+    .left-wrapper__rectangle-orange
+        width: 550px
+        height: 200px
+    .left-wrapper__rectangle-grey
+        width: 500px
+        height: 200px
+    .right-wrapper
+        right: 20px
+    .main-section__first-elipse
+        right: 10px
+    .main-section
+        min-height: 690px
+    .main-section__second-elipse
+        top: 550px
+    .guitar_centers
+        width: 300px
+        height: 300px
+    .skills__img
+        height: 275px
+    .skills__title
+        font-size: 30px
+    .skills__icons
+        margin-right: 10px
+    .skills
+        min-height: 600px
+    .skills__second-elipse
+        top: 192px
+
+    .title-hr_top
+        bottom: 57px
+
+@media (max-width:991px)
+    .container
+        width: 720px
+    .main-section
+        min-height: 470px
+    .main-section__first-elipse
+        right: -23px
+        top: 25px
+    .title
+        font-size: 50px
+    .main-section__second-elipse
+        top: 347px
+        width: 250px
+        height: 250px
+    .left-wrapper img
+        width: 450px
+    .left-wrapper__rectangle-blue
+        width: 351px
+        height: 85px
+        left: -74px
+        top: 101px
+    .left-wrapper__rectangle-orange
+        width: 400px
+        height: 100px
+        left: -74px
+        top: 101px
+    .left-wrapper__rectangle-grey
+        width: 351px
+        height: 85px
+        left: -27px
+        top: 108px
+    .right-wrapper
+        top: 54px
+        width: 263px
+        z-index: 5
+    .right-wrapper__button
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .buttons__main-btn
+        margin-right: 0px
+        margin-bottom: 10px
+    .main-section__nav-container
+        margin-bottom: 20px
+    .guitar_centers
+        width: 225px
+        height: 225px
+    .skills__img
+        height: 200px
+        width: 150px
+    .skills__title
+        font-size: 20px
+    .guitar_centers
+        margin-bottom: 60px
+    .skills__times
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 720px
+        padding-left: 103px
+        padding-right: 103px
+    .skills__second-elipse
+        top: 107px
+    .elipse_min__two
+        width: 170px
+        height: 170px
+        top: 372px
+        left: -24px
+    .elipse_min
+        width: 230px
+        height: 230px
+
+    .subtract_min
+        width: 140px
+        height: 140px
+    .information__first-elipse
+        top: 272px
+        left: 14px
+    .information-wrapper__button
+        flex-wrap: wrap
+        margin-bottom: 20px
+    .footer__img
+        left: -197px
+        width: 531px
+        top: 8px
+        bottom: 0px
+    .title-hr_top
+        bottom: 52px
+    .icons__item
+        border: none
+    .icons__item:hover
+        border: none
+        color: red
+    .information__titles
+        display: none
+    .information__text
+        max-width: 720px
+    .information .container
+        justify-content: center
+    .information-wrapper__button
+        display: flex
+        justify-content: space-between
+
+@media (max-width:767px)
+    .container
+        width: 540px
+    .nav-menu
+        position: fixed
+        top: 0
+        right: -100%
+        height: 100vh
+        width: 50%
+        background: #5290EA
+        z-index: 20
+        transition: 1s all
+
+    .nav-menu__list
+        flex-direction: column
+        justify-content: space-around
+        height: 100%
+        align-items: center
+    .nav-menu__list-item
+        margin-right: 0px
+        font-size: 20px
+
+    .hamburger
+        width: 30px
+        height: 14px
+        position: fixed
+        top: 40px
+        right: 30px
+        z-index: 40
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background: black
+            margin-bottom: 4px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0px
+    .hamburger_active
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-menu_active
+        right: 0
+    .left-wrapper
+        img
+            width: 350px
+    .elipse
+        width: 100px
+        height: 100px
+    .elipse__subtract
+        width: 70.33px
+        height: 70.33px
+    .title
+        font-size: 30px
+    .right-wrapper
+        top: -32px
+        right: -28px
+        width: 263px
+        z-index: 5
+    .buttons__main-btn
+        width: 185px
+        height: 48px
+        font-size: 16px
+    .right-wrapper__icons-box
+        margin-bottom: 20px
+        padding-left: 0px
+        width: 150px
+    .icons__item
+        width: 100%
+        height: 100%
+    .left-wrapper__rectangle-blue
+        width: 320px
+    .left-wrapper__rectangle-orange
+        width: 360px
+    .left-wrapper__rectangle-grey
+        width: 315px
+        height: 90px
+    .buttons__main-btn
+        margin-bottom: 20px
+    .main-section
+        min-height: 415px
+    .main-section__first-elipse
+        right: -14px
+        top: -31px
+    .main-section__second-elipse
+        top: 362px
+        right: -37px
+    .skills__first-elipse
+        top: -45px
+        right: 66px
+    .skills__games
+        pointer-events: auto
+    .skills__second-elipse
+        top: 965px
+        left: 67px
+    .skills__times
+        display: flex
+        flex-wrap: wrap
+        width: 107%
+        padding-left: 0px
+        padding-right: 0px
+        justify-content: space-evenly
+
+    .clills__text-times
+        font-size: 16px
+
+    .information__titles
+        display: none
+    .information-wrapper__title-text
+        width: 162px
+    .information .container
+        display: block
+        min-height: 461px
+    .information__text-wrapper
+        width: 469px
+        margin: 0 auto
+    .information-wrapper__button
+        display: flex
+        margin-bottom: 20px
+        justify-content: space-around
+    .information__three-elipse
+        top: -41px
+        right: -45px
+    .footer__img
+        left: -180px
+        width: 468px
+        top: 32px
+    .title-hr_top
+        bottom: 30px
+    //слайдер
+    .skills__games
+        max-width: 500px
+        height: 410px
+        margin: 0 auto
+        position: relative
+        overflow: hidden
+        margin-bottom: 50px
+        height: 327px
+    .guitar_centers
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 0
+    .skills__arrow
+        width: 40px
+        height: 40px
+        display: block
+        background: none
+        border: none
+    .arrow__img
+        width: 31px
+        height: 31px
+    .arrow_two
+        top: 153px
+        right: 23px
+        z-index: 1
+    .arrow_one
+        top: 153px
+        right: 444px
+    .skills__img
+        height: 300px
+        width: 230px
+    .skills__title
+        font-size: 30px
+
+    .arrow_left
+        transform: rotate(180deg)
+    .skills__first-elipse
+        top: -45px
+        right: -27px
+        z-index: 2
+    .skills__second-elipse
+        top: 264px
+        left: -38px
+        z-index: 2
+    .dots__dot
+        width: 15px
+        height: 15px
+        background: #484040
+        position: relative
+        border-radius: 100%
+        z-index: 2
+        border: none
+    .dots
+        position: absolute
+        bottom: 12px
+        display: flex
+        justify-content: space-evenly
+        width: 100%
+        right: 0px
+    .dots__dot_active
+        background: black
+
+@media (max-width:575px)
+    .container
+        width: 100%
+    .left-wrapper img
+        margin-bottom: 55px
+    .left-wrapper
+        min-width: 203px
+    .main-section__first-elipse
+        right: 10px
+        top: -42px
+    .skills__img
+        height: 257px
+        width: 194px
+    .main-section__content-container
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .right-wrapper
+        position: relative
+        right: 0
+        margin: 0 auto
+    .left-wrapper__rectangle-blue
+        width: 216px
+        height: 58px
+        left: -22px
+        top: 63px
+    .left-wrapper__rectangle-grey
+        width: 216px
+        height: 58px
+        left: 25px
+        top: 103px
+
+    .left-wrapper__rectangle-orange
+        width: 254px
+        height: 100px
+        left: -16px
+        top: 61px
+    .arrow_one
+        position: static
+        margin-top: 130px
+        margin-left: 8px
+    .arrow_two
+        top: 130px
+        right: 10px
+
+    .dots
+        position: absolute
+        justify-content: space-evenly
+        width: 100%
+        right: 0
+    .information__text-wrapper
+        width: 90%
+    .footer .container
+        min-width: 227px
+        min-height: 200px
+    .footer__img
+        display: none
+    .footer__title-text
+        font-size: 25px
+    .title-hr_top
+        bottom: 26px
+    .footer__wrapper
+        margin: 0 auto
+    .footer .container
+        background: #9e9e9e
+    .skills__times
+        width: 98%
+    .skills__games
+        height: 280px
+    .skills__title
+        font-size: 25px
+    .skills__second-elipse
+        top: 230px
+    .footer__title-text
+        line-height: 26px
